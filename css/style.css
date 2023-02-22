@@ -1,0 +1,230 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+    
+    /*
+    CSS Reset ends
+  */
+
+  * {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
+
+  body {
+    display: grid;
+    place-content: center;
+    height: auto;
+    min-height: 100vh;
+    padding: 4.375rem 1.5625rem;
+    background-color: hsl(210deg, 46%, 95%);
+  }
+
+  main {
+    display: grid;
+    place-content: center;
+    gap: 1.5625rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.875rem;
+    border-radius: 0.625rem;
+    box-shadow:
+        4.6px 4.4px 4px rgba(0, 0, 0, 0.016),
+        5.4px 14.7px 13.4px rgba(0, 0, 0, 0.024),
+        69px 66px 60px rgba(0, 0, 0, 0.04);
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .image {
+    width: 32px;
+    padding: 0.125rem;
+    border-radius: 50%;
+    background-color: hsla(210, 46%, 95%, 0.5);
+  }
+
+  .card4 .image {
+    background-color: hsla(263, 55%, 52%, 0.8);
+  }
+
+  .card-header-h {
+    font-size: 0.7rem;
+    color: hsl(217, 19%, 35%);
+  }
+
+  .card-header-p {
+    font-size: 0.7rem;
+    color: hsl(217, 19%, 35%);
+    opacity: 50%;
+  }
+
+  blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .quote-h {
+    font-size: 1.23rem;
+    font-weight: 600;
+    letter-spacing: 0.025rem;
+    color: hsl(217, 19%, 35%);
+  }
+
+  .quote-p {
+    font-size: 0.834rem;
+    font-weight: 500;
+    line-height: 1.15rem;
+    letter-spacing: 0.002rem;
+    color: hsl(217, 19%, 35%);
+    opacity: 70%;
+  }
+
+  .card1 {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 0%;
+  }
+
+  .card2 {
+    background-color: hsl(217, 19%, 35%);
+  }
+
+  .card3 {
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .card4 {
+    background-color: hsl(219, 29%, 14%);
+  }
+
+  .card5 {
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .card1 .card-header-h,
+  .card2 .card-header-h,
+  .card4 .card-header-h {
+    color: hsl(0, 0%, 100%);
+  } 
+  
+  .card1 .card-header-p,
+  .card2 .card-header-p,
+  .card4 .card-header-p {
+    color: hsl(0, 0%, 100%);
+  } 
+  
+  .card1 .quote-h,
+  .card2 .quote-h,
+  .card4 .quote-h {
+    color: hsl(0, 0%, 100%);
+  } 
+  
+  .card1 .quote-p,
+  .card2 .quote-p,
+  .card4 .quote-p {
+    color: hsl(0, 0%, 100%);
+  }
+
+  @media screen and (min-width: 50rem){
+
+    main {
+        max-width: 1120px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .card1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .card2 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .card3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .card4 {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .card5 {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    
+  }
+
+  @media screen and (min-width: 62.5rem) {
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .card1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .card2 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .card3 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .card4 {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .card5 {
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+    
+  }
